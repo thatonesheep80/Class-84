@@ -1,9 +1,12 @@
 canvas = document.getElementById("myCanvas");
 ctx = canvas.getContext("2d");
 
+mars_imgs = ["mars.jpg" , "Mars1.jpg" , "Mars2.jpg" , "Mars3.jpg"];
+random_number = Math.floor(Math.random() * 4 );
+
 rover_width = 100;
 rover_height = 90;
-background_image = "mars.jpg";
+background_image = mars_imgs[random_number];
 rover_image = "rover.png";
 rover_x = 10;
 rover_y = 10;
@@ -36,22 +39,22 @@ function my_keydown(e)
     keyPressed = e.keyCode;
     console.log(keyPressed);
     
-    if (keyPressed = '38')
+    if (keyPressed == '38')
     {
         up();
         console.log("up");
     }
-    if (keyPressed = '40')
+    if (keyPressed == '40')
     {
         down();
         console.log("down");
     }
-    if (keyPressed = '37')
+    if (keyPressed == '37')
     {
         left();
         console.log("left");
     }
-    if (keyPressed = '39')
+    if (keyPressed == '39')
     {
         right();
         console.log("right");
